@@ -6,8 +6,8 @@ spec:
     schedule: ""
   cluster:
     devEnvApprovers:
-    - todo
-    environmentGitOwner: todo
+    - irvan-sekera
+    environmentGitOwner: defindal
     gitKind: github
     gitName: github
     gitServer: https://github.com
@@ -16,6 +16,8 @@ spec:
     registry: gcr.io
   environments:
   - key: dev
+    owner: defindal
+    repository: jx3-gke-gsm-dev
   - key: staging
   - key: production
   ingress:
