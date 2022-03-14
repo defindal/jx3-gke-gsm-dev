@@ -22,7 +22,7 @@ spec:
     zone: asia-southeast1-a
   environments:
   - key: dev
-    owner: defindal
+    owner: "defindal"
     repository: jx3-gke-gsm-dev
   - key: staging
   - key: production
