@@ -28,6 +28,8 @@ spec:
       email: ""
       enabled: false
       production: false
+      pipelineUser:
+        username: irvan-sekera
   repository: nexus
   secretStorage: gsm
   vault: {}
