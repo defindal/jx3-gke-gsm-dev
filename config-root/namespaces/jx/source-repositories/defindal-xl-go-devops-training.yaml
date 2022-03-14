@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: defindal
+    provider: github
+    repository: xl-go-devops-training
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: defindal-xl-go-devops-training
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/defindal/xl-go-devops-training.git
+  org: defindal
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: xl-go-devops-training
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/defindal/xl-go-devops-training

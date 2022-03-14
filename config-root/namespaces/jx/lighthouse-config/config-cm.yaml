@@ -8,6 +8,8 @@ data:
     in_repo_config:
       enabled:
         defindal/jx3-gke-gsm-dev: true
+        defindal/jx3-spring: true
+        defindal/xl-go-devops-training: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +22,8 @@ data:
         skip-unknown-contexts: false
       merge_method:
         defindal/jx3-gke-gsm-dev: merge
+        defindal/jx3-spring: merge
+        defindal/xl-go-devops-training: merge
       queries:
       - labels:
         - approved
@@ -31,6 +35,8 @@ data:
         - needs-rebase
         repos:
         - defindal/jx3-gke-gsm-dev
+        - defindal/jx3-spring
+        - defindal/xl-go-devops-training
       - labels:
         - updatebot
         missingLabels:
@@ -41,6 +47,8 @@ data:
         - needs-rebase
         repos:
         - defindal/jx3-gke-gsm-dev
+        - defindal/jx3-spring
+        - defindal/xl-go-devops-training
       target_url: http://lighthouse-jx.35.186.144.18.nip.io/merge/status
 kind: ConfigMap
 metadata:

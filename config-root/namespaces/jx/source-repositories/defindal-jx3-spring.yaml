@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: defindal
+    provider: github
+    repository: jx3-spring
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: defindal-jx3-spring
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/defindal/jx3-spring.git
+  org: defindal
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: jx3-spring
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/defindal/jx3-spring

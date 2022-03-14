@@ -6,6 +6,14 @@ data:
       repos:
       - defindal/jx3-gke-gsm-dev
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - defindal/jx3-spring
+      require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - defindal/xl-go-devops-training
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -21,6 +29,16 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
+      defindal/jx3-spring:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
+      defindal/xl-go-devops-training:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
     heart: {}
     label:
       additional_labels: null
@@ -28,6 +46,38 @@ data:
     plugins:
       defindal/jx3-gke-gsm-dev:
       - config-updater
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      defindal/jx3-spring:
+      - approve
+      - assign
+      - blunderbuss
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - heart
+      - cat
+      - dog
+      - pony
+      defindal/xl-go-devops-training:
       - approve
       - assign
       - blunderbuss
@@ -55,6 +105,14 @@ data:
     - repos:
       - defindal/jx3-gke-gsm-dev
       trusted_org: todo
+    - repos:
+      - defindal/jx3-spring
+      trusted_org: todo
+    - repos:
+      - defindal/xl-go-devops-training
+      trusted_org: todo
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
