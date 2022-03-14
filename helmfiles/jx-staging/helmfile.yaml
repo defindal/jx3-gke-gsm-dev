@@ -15,7 +15,7 @@ releases:
   values:
   - jx-values.yaml
 - chart: dev/xl-go-devops-training
-  version: 0.0.1
+  version: 0.0.2
   name: xl-go-devops-training
   namespace: jx-staging
   values:
