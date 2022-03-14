@@ -18,5 +18,7 @@ releases:
   version: 0.0.1
   name: xl-go-devops-training
   namespace: jx-staging
+  values:
+  - jx-values.yaml
 templates: {}
 renderedvalues: {}
