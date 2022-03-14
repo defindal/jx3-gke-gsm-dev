@@ -1,0 +1,10 @@
+# Source: xl-go-devops-training/templates/sa.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: xl-go-devops-training-xl-go-devops-training
+  annotations:
+    meta.helm.sh/release-name: 'xl-go-devops-training'
+  namespace: jx-staging
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'

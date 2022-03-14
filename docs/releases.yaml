@@ -32,6 +32,18 @@
     repositoryName: jxgh
     repositoryUrl: https://jenkins-x-charts.github.io/repo
     resourcePath: config-root/namespaces/jx-staging/jx-verify
+  - apiVersion: v1
+    appVersion: 0.0.1
+    description: A Helm chart for Kubernetes
+    firstDeployed: "2022-03-14T15:23:05Z"
+    icon: https://raw.githubusercontent.com/cdfoundation/artwork/master/jenkinsx/icon/color/jenkinsx-icon-color.png
+    lastDeployed: "2022-03-14T15:23:05Z"
+    logsUrl: https://console.cloud.google.com/logs/viewer?authuser=1&project=xl-devops&minLogLevel=0&expandAll=false&customFacets=&limitCustomFacetWidth=true&interval=PT1H&resource=k8s_container%2Fcluster_name%2Fjx3-dev-cluster%2Fnamespace_name%2Fjx-staging%2Fcontainer_name%2Fxl-go-devops-training&dateRangeUnbound=both
+    name: xl-go-devops-training
+    repositoryName: dev
+    repositoryUrl: http://chartmuseum-jx.35.186.144.18.nip.io
+    resourcePath: config-root/namespaces/jx-staging/xl-go-devops-training
+    version: 0.0.1
 - namespace: jx
   path: helmfiles/jx/helmfile.yaml
   releases:
