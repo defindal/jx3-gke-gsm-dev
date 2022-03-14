@@ -41,7 +41,7 @@ data:
         - needs-rebase
         repos:
         - defindal/jx3-gke-gsm-dev
-      target_url: http://lighthouse-jx./merge/status
+      target_url: http://lighthouse-jx.35.186.144.18.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null
