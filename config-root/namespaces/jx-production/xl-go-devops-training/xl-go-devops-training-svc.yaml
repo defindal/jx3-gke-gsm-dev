@@ -4,7 +4,7 @@ kind: Service
 metadata:
   name: xl-go-devops-training
   labels:
-    chart: "xl-go-devops-training-0.0.1"
+    chart: "xl-go-devops-training-0.0.2"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'xl-go-devops-training'
