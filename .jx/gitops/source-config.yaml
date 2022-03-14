@@ -8,8 +8,8 @@ spec:
     provider: https://github.com
     providerKind: github
     repositories:
-    - name: xl-go-devops-training
     - name: jx3-spring
+    - name: xl-go-devops-training
     scheduler: in-repo
   slack:
     channel: '#jenkins-x-pipelines'
