@@ -1,0 +1,22 @@
+# Source: xl-go-devops-training/templates/ingress.yaml
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  annotations:
+    kubernetes.io/ingress.class: nginx
+    meta.helm.sh/release-name: 'xl-go-devops-training'
+  name: xl-go-devops-training
+  namespace: jx-production
+  labels:
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+spec:
+  rules:
+    - http:
+        paths:
+          - pathType: ImplementationSpecific
+            backend:
+              service:
+                name: xl-go-devops-training
+                port:
+                  number: 80
+      host: xl-go-devops-training-jx-production.35.186.144.18.nip.io
