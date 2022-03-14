@@ -5,15 +5,21 @@ spec:
     enabled: false
     schedule: ""
   cluster:
+    chartRepository: http://jenkins-x-chartmuseum.jx.svc.cluster.local:8080
+    clusterName: jx3-dev-cluster
     devEnvApprovers:
     - irvan-sekera
     environmentGitOwner: defindal
     gitKind: github
     gitName: github
     gitServer: https://github.com
+    gke:
+      projectNumber: "398506542991"
     kanikoFlags: --skip-unused-stages --snapshotMode=redo
+    project: xl-devops
     provider: gke
     registry: gcr.io
+    zone: asia-southeast1-a
   environments:
   - key: dev
     owner: defindal
@@ -21,16 +27,24 @@ spec:
   - key: staging
   - key: production
   ingress:
-    domain: ""
-    externalDNS: false
+    domain: 35.186.144.18.nip.io
+    kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
-      production: false
-      pipelineUser:
-        username: irvan-sekera
+      production: true
+  kuberhealthy: true
+  pipelineUser:
+    username: irvan-sekera
   repository: nexus
   secretStorage: gsm
+  storage:
+  - name: logs
+    url: gs://logs-jx3-dev-cluster-416204fda5ba
+  - name: reports
+    url: gs://reports-jx3-dev-cluster-416204fda5ba
+  - name: repository
+    url: gs://repository-jx3-dev-cluster-416204fda5ba
   vault: {}
   webhook: lighthouse
