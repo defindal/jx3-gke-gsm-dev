@@ -5,7 +5,7 @@ metadata:
   name: xl-go-devops-training-xl-go-devops-training
   labels:
     draft: draft-app
-    chart: "xl-go-devops-training-0.0.3"
+    chart: "xl-go-devops-training-0.0.4"
     gitops.jenkins-x.io/pipeline: 'namespaces'
   annotations:
     meta.helm.sh/release-name: 'xl-go-devops-training'
@@ -25,11 +25,11 @@ spec:
       serviceAccountName: xl-go-devops-training-xl-go-devops-training
       containers:
         - name: xl-go-devops-training
-          image: "gcr.io/xl-devops/xl-go-devops-training:0.0.3"
+          image: "gcr.io/xl-devops/xl-go-devops-training:0.0.4"
           imagePullPolicy: IfNotPresent
           env:
             - name: VERSION
-              value: 0.0.3
+              value: 0.0.4
           envFrom: null
           ports:
             - name: http
